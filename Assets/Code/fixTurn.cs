@@ -6,19 +6,33 @@ public class fixTurn : MonoBehaviour
 {
     Camera cam;
     Vector3 sc;
+    GameObject turn;
 
     void Awake()
     {
       cam = GameObject.Find("camera").GetComponent<Camera>();
+      turn = transform.GetChild(0).gameObject;
     }
 
     void FixedUpdate()
     {
-        float x = cam.WorldToScreenPoint(transform.position).x / Screen.width;
-        float y = cam.WorldToScreenPoint(transform.position).y / Screen.height;
-        if (x < 0.55f && x > 0.45f && y < 0.55f && y > 0.45f)
+        if(cam.WorldToScreenPoint(transform.position).z < 1.4f)
         {
-          transform.Rotate(transform.forward * Input.GetAxis("Mouse ScrollWheel") * 100f);
+          float x = cam.WorldToScreenPoint(transform.position).x / Screen.width;
+          float y = cam.WorldToScreenPoint(transform.position).y / Screen.height;
+          if (x < 0.6f && x > 0.4f && y < 0.6f && y > 0.4f)
+          {
+            transform.Rotate(transform.forward * Input.GetAxis("Mouse ScrollWheel") * 100f);
+            turn.SetActive(true);
+          }
+          else
+          {
+            turn.SetActive(false);
+          }
+        }
+        else
+        {
+          turn.SetActive(false);
         }
     }
 }
