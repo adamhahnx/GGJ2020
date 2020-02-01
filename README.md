@@ -1,7 +1,6 @@
-# Fogie's Arcade Repair
-
-1920s style 'game within a game' in which you repair a mechanical (steampunk-esque) arcade while you're playing it.  
-Playable on PC.
+# Fogie's Arcade Repair  
+This concept is an art-deco style 'game within a game.' The premise is simple. You must repair a primitive, 1920s mechanical arcade game -while playing it!  
+Playable on PC.  
 Developed in a weekend for #GGJ20  
   
 Code - Adam Hahn https://adamhahn.app  
