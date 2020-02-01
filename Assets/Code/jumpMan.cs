@@ -4,29 +4,26 @@ using UnityEngine;
 
 public class jumpMan : MonoBehaviour
 {
-  float floor;
-  bool jumping = false;
+  Rigidbody rb;
+  public Vector3 floor;
+  AudioSource m;
 
   void Awake()
   {
-    floor = transform.position.y;
+    rb = GetComponent<Rigidbody>();
+    floor = transform.position;
+    m = GameObject.Find("machineSound").GetComponent<AudioSource>();
   }
 
-  public void Jump()
+  void FixedUpdate()
   {
-    jumping = true;
-    transform.position += new Vector3(0f, 1f, 0f);
-  }
+    GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 
-  void Update()
-  {
-    if(jumping)
+    m.pitch = 1f + (transform.position.y - floor.y) * 0.25f;
+
+    if(Input.GetButtonDown("Jump"))
     {
-      transform.position = new Vector3(0f, Mathf.Lerp(transform.position.y, transform.position.y + 1f, Time.deltaTime), 0f);
-    }
-    else
-    {
-      transform.position = new Vector3(0f, Mathf.Lerp(transform.position.y, floor, Time.deltaTime), 0f);
+      rb.AddForce(new Vector3(0f, 4f, 0f), ForceMode.Impulse);
     }
   }
 }
