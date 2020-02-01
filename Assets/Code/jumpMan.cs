@@ -8,6 +8,8 @@ public class jumpMan : MonoBehaviour
   public Vector3 floor;
   AudioSource m;
 
+  public float jumpHeight = 1f;
+
   void Awake()
   {
     rb = GetComponent<Rigidbody>();
@@ -23,7 +25,7 @@ public class jumpMan : MonoBehaviour
 
     if(Input.GetButtonDown("Jump"))
     {
-      rb.AddForce(new Vector3(0f, 4f, 0f), ForceMode.Impulse);
+      rb.AddForce(new Vector3(0f, jumpHeight, 0f), ForceMode.Impulse);
     }
   }
 }
