@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class playerMove : MonoBehaviour
 {
-    // Start is called before the first frame update
+    CharacterController cc;
+
     void Start()
     {
-        
+        cc = GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+      cc.Move(transform.right * Input.GetAxis("Horizontal") * 2f * Time.deltaTime);
+      cc.Move(transform.forward * Input.GetAxis("Vertical") * 2f * Time.deltaTime);
     }
 }
