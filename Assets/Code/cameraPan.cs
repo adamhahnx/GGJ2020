@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class cameraPan : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    Vector2 next = new Vector2 (0, 0);
     void Update()
     {
-        
+      next.y += Input.GetAxis("Mouse X");
+      next.x += -Input.GetAxis("Mouse Y");
+      transform.eulerAngles = (Vector2) next * 2f;
     }
 }
