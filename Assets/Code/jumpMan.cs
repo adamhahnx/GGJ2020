@@ -5,10 +5,11 @@ using UnityEngine;
 public class jumpMan : MonoBehaviour
 {
   Rigidbody rb;
-  public Vector3 floor;
+  Vector3 floor;
   AudioSource m;
 
   public float jumpHeight = 1f;
+  public float jumpHeightX = 0.1f;
 
   void Awake()
   {
@@ -19,13 +20,15 @@ public class jumpMan : MonoBehaviour
 
   void FixedUpdate()
   {
+    transform.position = new Vector3(-1.5f, transform.position.y, transform.position.z);
     GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+    transform.localRotation = Quaternion.identity;
 
-    m.pitch = 1f + (transform.position.y - floor.y) * 0.25f;
+    m.volume = 1f + (transform.position.y - floor.y) * 0.25f;
 
     if(Input.GetButtonDown("Jump"))
     {
-      rb.AddForce(new Vector3(0f, jumpHeight, 0f), ForceMode.Impulse);
+      rb.AddForce(new Vector3(0f, jumpHeight, jumpHeightX), ForceMode.Impulse);
     }
   }
 }

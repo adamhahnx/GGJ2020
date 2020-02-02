@@ -31,7 +31,7 @@ public class pipeHeight : MonoBehaviour
     {
       transform.position += new Vector3(0f, amount / 800f, 0f);
 
-      m.volume = transform.position.y - 0.4f;
+      m.pitch = transform.position.y - 0.4f;
 
       if(transform.position.y < 0.6f)
       {
