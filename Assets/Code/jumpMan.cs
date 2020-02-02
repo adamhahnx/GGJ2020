@@ -22,6 +22,7 @@ public class jumpMan : MonoBehaviour
     m = GameObject.Find("machineSound").GetComponent<AudioSource>();
     c = GameObject.Find("jumpSound").GetComponent<AudioSource>();
     j = GameObject.Find("radioSound").GetComponent<AudioSource>();
+    Cursor.visible = false;
   }
 
   void FixedUpdate()
