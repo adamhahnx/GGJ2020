@@ -6,7 +6,7 @@ Developed in a weekend for #GGJ20 !
   
 Code - Adam Hahn https://adamhahn.app  
 3D Art, Matierials - Oakland Elliff https://www.artstation.com/oakieland  
-3D Art - Aaron Cloet  
+3D Art - Aaron Cloet https://www.linkedin.com/in/aaron-cloet-9972b9152/
   
 Music - Gathacol Radio https://archive.org/details/Free_20s_Jazz_Collection  
 Mechanical Sound Effect - dklon https://opengameart.org/content/broken-fan-loop  
