@@ -1,7 +1,8 @@
 # Fogie's Arcade Repair  
-This concept is an art-deco style 'game within a game.' The premise is simple. You must repair a primitive, 1920s mechanical arcade game -while playing it!  
+This concept is an art-deco style 'game within a game.'  
+The premise is simple. You must repair a primitive, 1920s mechanical arcade game -while playing it!  
 Playable on PC.  
-Developed in a weekend for #GGJ20  
+Developed in a weekend for #GGJ20 !  
   
 Code - Adam Hahn https://adamhahn.app  
 3D Art, Matierials - Oakland Elliff https://www.artstation.com/oakieland  
