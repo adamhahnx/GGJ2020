@@ -29,7 +29,7 @@ public class pipeHeight : MonoBehaviour
 
     void Crank(float amount)
     {
-      transform.position += new Vector3(0f, amount / 800f, 0f);
+      transform.position += new Vector3(0f, (amount / 360f), 0f);
 
       m.pitch = transform.position.y - 0.4f;
 
